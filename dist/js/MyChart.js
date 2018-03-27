@@ -23,6 +23,10 @@ class MyChart {
         this.chartDataElement = document.querySelector("#dataChart");
         this.chartData = this.criarChartData();
 
+        this.refresh = document.querySelector("#refresh");
+        this.refresh.addEventListener('click', () => {
+            this.carregaDados().then(() => this.render());
+        } );
 
 
     }
